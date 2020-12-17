@@ -2,6 +2,7 @@ import React from 'react';
 import PageRoutes from '../../Pages/routes';
 import UserRoutes from '../../Users/routes';
 import AuthenticationRoutes from '../../Authentication/routes';
+import ProductRoutes from '../../Products/routes';
 
 const Routes = () => {
   return (
@@ -9,6 +10,7 @@ const Routes = () => {
       <PageRoutes/>
       <UserRoutes/>
       <AuthenticationRoutes/>
+      <ProductRoutes/>
     </>
   );
 }
