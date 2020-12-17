@@ -70,7 +70,7 @@ const ProductForm = ({ endpoint, preload }) => {
         <Form.Label>Desciption</Form.Label>
         <Form.Control 
           onChange={handleChange} 
-          name="desctiption" 
+          name="description" 
           placeholder="Enter product description"
           defaultValue={inputs.description}
         />

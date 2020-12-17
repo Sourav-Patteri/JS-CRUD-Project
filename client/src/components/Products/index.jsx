@@ -47,7 +47,7 @@ const Products = () => {
                   {products.map((product, i) => (
                     <tr key={i}>
                       <td>
-                        {product.ProductName}
+                        {product.productName}
                       </td>
                       
                       <td>

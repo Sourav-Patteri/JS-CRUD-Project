@@ -6,6 +6,7 @@ import Index from './index';
 import Show from './Show';
 import New from './New';
 import Edit from './Edit';
+import Destroy from '../Products/Destroy';
 
 const Routes = () => {
   const { user } = useContext(UserContext);
@@ -19,6 +20,7 @@ const Routes = () => {
           <Route exact path="/users" component={Index}/>
           <Route exact path="/profile" component={Show}/>
           <Route exact path="/profile/edit" component={Edit}/>
+  
         </>
       ) : null}
     </Switch>
