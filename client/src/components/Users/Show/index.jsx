@@ -22,20 +22,20 @@ const Show = () => {
   return (
     userDetails ? (
       <>
-        <Header title="Your title for the Header component block">
-          <p>
+        <Header title="User Profile Page">
+          {/* <p>
             This paragraph will be the value for <strong>&#123;children&#125;</strong> in the <strong>Header component</strong>.
           </p>
 
           <p>
             The header is editable under <strong>/src/components/Users/Show/index.jsx</strong>
-          </p>
+          </p> */}
         </Header>
 
         <Container>
-          <p>
+          {/* <p>
             The content is editable under <strong>/src/components/Users/Show/index.jsx</strong>
-          </p>
+          </p> */}
 
           <Media>
             <img

@@ -15,6 +15,7 @@ const passport = require('passport');
     router.post('/products/update', passport.authenticate('jwt', { session: false }), update);
   
     // localhost:4000/products/destroy
-    router.post('/products/destroy', passport.authenticate('jwt', { session: false }), destroy);
+    // router.post('/products/destroy', passport.authenticate('jwt', { session: false }), destroy);
+    router.post('/products/destroy', destroy);
   };
   

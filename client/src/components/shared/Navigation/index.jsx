@@ -35,6 +35,7 @@ const Navigation = () => {
               <Link to="/users" component={NavLink}>Users</Link>
               <Link to="/profile" component={NavLink}>Profile</Link>
               <Link to="/products/new" component={NavLink}>Add a product</Link> 
+              <Link to="/products/cart" component={NavLink}></Link> 
               {/* <Link to="/profile/edit" component={NavLink}>Edit Profile</Link> */}
               <Link to="/logout" component={NavLink}>Logout</Link>
             </>

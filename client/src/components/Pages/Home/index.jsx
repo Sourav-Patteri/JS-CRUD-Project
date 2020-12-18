@@ -2,16 +2,13 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import Header from '../../shared/Header';
 
+
 const Home = () => {
   return (
     <>
-      <Header title="Your title for the Header component block">
+      <Header title="Escia">
         <p>
-          This paragraph will be the value for <strong>&#123;children&#125;</strong> in the <strong>Header component</strong>.
-        </p>
-
-        <p>
-          The header is editable under <strong>/src/components/Pages/Home/index.jsx</strong>
+          Make your life better with our products.
         </p>
       </Header>
 
@@ -23,6 +20,28 @@ const Home = () => {
         </p>
 
         <p>You home page content!</p>
+        <br/> <br/>
+        <img
+          src={"https://via.placeholder.com/150"}
+          width={200}
+          height={200}
+          className="mr-3"
+          alt="any"
+         /> 
+         <img
+          src={"https://via.placeholder.com/150"}
+          width={200}
+          height={200}
+          className="mr-3"
+          alt="any"
+         /> 
+         <img
+          src={"https://via.placeholder.com/150"}
+          width={200}
+          height={200}
+          className="mr-3"
+          alt="any"
+         /> 
       </Container>
     </>
   );

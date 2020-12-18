@@ -22,15 +22,14 @@ exports.index = async (req, res, next) => {
   
   exports.create = async (req, res, next) => {
     try {
-      const { productName, description, price, seller } = req.body;
+      const { productName, description, price } = req.body;
   
       const user = await User.findById(req.user._id);
   
       const prdct = await Product.create({
         productName: productName,
         description: description,
-        price: price,
-        seller: user.name
+        price: price
       });
   
       res.status(200).json({ message: "The product was added successfully", product: prdct });
