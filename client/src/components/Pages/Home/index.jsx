@@ -2,7 +2,7 @@ import React from 'react';
 import {Container, Carousel} from 'react-bootstrap';
 import Header from '../../shared/Header';
 import Camera from '../../shared/Assets/camera.jpg'
-import Laptop from '../../shared/Assets/laptop.jpg'
+import Laptop from '../../shared/Assets/laptop.png'
 import Technology from '../../shared/Assets/technology.jpg'
 
 const Home = () => {

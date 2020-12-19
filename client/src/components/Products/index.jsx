@@ -41,7 +41,7 @@ const Products = () => {
                   <th>Product Name</th>
                   <th>Description</th>
                   <th>Price</th>
-                  <th>Options</th>
+                  {user && user.token ? (<th>Options</th>) : null}
                   </tr>
                 </thead>
     
@@ -59,20 +59,24 @@ const Products = () => {
                       <td>
                         {product.price}
                       </td>
-    
+                      {user && user.token ? (
+                      <>
+
                       <td>
-                      <Link to={`products/show/${product._id}`}>
-                          view
-                        </Link>
-                        &nbsp;|&nbsp;
-                        <Link to={`products/edit/${product._id}`}>
-                          edit
-                        </Link>
-                        &nbsp;|&nbsp;
-                        <Link to={`products/destroy/${product._id}`}>
-                          delete
-                        </Link>
+                         <Link to={`products/show/${product._id}`}>
+                         view
+                       </Link>
+                       &nbsp;|&nbsp;
+                       <Link to={`products/edit/${product._id}`}>
+                         edit
+                       </Link>
+                       &nbsp;|&nbsp;
+                       <Link to={`products/destroy/${product._id}`}>
+                         delete
+                       </Link>                      
                       </td>
+                      </>
+                       ) : null }
                     </tr>
                   ))}
                 </tbody>

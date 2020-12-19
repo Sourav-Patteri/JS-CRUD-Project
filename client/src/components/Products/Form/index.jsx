@@ -85,7 +85,7 @@ const ProductForm = ({ endpoint, preload }) => {
           placeholder="Enter product price(format - 0.00)"
           defaultValue={inputs.price}
           min={0.01}
-          step={0.25}
+          step={0.01}
         />
       </Form.Group>
 
