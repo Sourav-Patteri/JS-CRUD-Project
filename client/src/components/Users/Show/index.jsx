@@ -17,25 +17,25 @@ const Show = () => {
     .then(({ data }) => {
       setUserDetails(data);
     });
-  }, []);
+  }, [globalStore, user]);
 
   return (
     userDetails ? (
       <>
-        <Header title="Your title for the Header component block">
-          <p>
+        <Header title="User Profile Page">
+          {/* <p>
             This paragraph will be the value for <strong>&#123;children&#125;</strong> in the <strong>Header component</strong>.
           </p>
 
           <p>
             The header is editable under <strong>/src/components/Users/Show/index.jsx</strong>
-          </p>
+          </p> */}
         </Header>
 
         <Container>
-          <p>
+          {/* <p>
             The content is editable under <strong>/src/components/Users/Show/index.jsx</strong>
-          </p>
+          </p> */}
 
           <Media>
             <img
@@ -43,8 +43,9 @@ const Show = () => {
               width={150}
               height={150}
               className="mr-3"
+              alt="any"
             />
-            <Media.Body>
+            <Media.Body> 
               <h5>{userDetails.name}</h5>
               <p>
                 <strong>Email:</strong>&nbsp;{userDetails.email}

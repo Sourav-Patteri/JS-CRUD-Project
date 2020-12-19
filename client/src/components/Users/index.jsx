@@ -26,14 +26,14 @@ const Users = () => {
   return (
     users ? (
       <>
-        <Header title="Your title for the Header component block">
-          <p>
+        <Header title="Users">
+          {/* <p>
             This paragraph will be the value for <strong>&#123;children&#125;</strong> in the <strong>Header component</strong>.
           </p>
 
           <p>
             The header is editable under <strong>/src/components/Users/index.jsx</strong>
-          </p>
+          </p> */}
         </Header>
 
         <Container className="my-3">

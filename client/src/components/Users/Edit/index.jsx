@@ -15,7 +15,7 @@ const Edit = () => {
     .then(({ data }) => {
       setUserDetails(data);
     });
-  }, []);
+  }, [user]);
 
   return (
     userDetails ? (
@@ -23,10 +23,6 @@ const Edit = () => {
         <Header title="Edit your profile!"/>
         
         <Container>
-          <p>
-            The content is editable under <strong>/src/components/Users/Edit/index.jsx</strong>
-          </p>
-
           <UserForm
             preloadData={ userDetails }
             endpoint="/users/update"

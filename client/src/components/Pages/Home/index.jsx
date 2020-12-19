@@ -1,31 +1,61 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
+import {Container, Carousel} from 'react-bootstrap';
 import Header from '../../shared/Header';
+import Camera from '../../shared/Assets/camera.jpg'
+import Laptop from '../../shared/Assets/laptop.png'
+import Technology from '../../shared/Assets/technology.jpg'
 
 const Home = () => {
   return (
     <>
-      <Header title="Your title for the Header component block">
-        <p>
-          This paragraph will be the value for <strong>&#123;children&#125;</strong> in the <strong>Header component</strong>.
-        </p>
-
-        <p>
-          The header is editable under <strong>/src/components/Pages/Home/index.jsx</strong>
-        </p>
+      <Header title="Escia">
+        <p>Make your life better with our products.</p>
       </Header>
 
       <Container>
-        <hr/>
+        <Container>
+        <Carousel>
+          <Carousel.Item>
+            <img
+              
+              className="d-block w-100"
+              src={Camera}
+              alt="First slide"
+            />
+            <Carousel.Caption>
+              <h3>Buy Cameras</h3>
+              <p>DSLR's, Mirorless, etc..</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              className="d-block w-100"
+              src={Laptop}
+              alt="Third slide"
+            />
 
-        <p>
-          The content is editable under <strong>/src/components/Pages/Home/index.jsx</strong>
-        </p>
+            <Carousel.Caption>
+              <h3>Buy Laptops</h3>
+              <p>MacBooks, Dell, HP, etc.</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              className="d-block w-100"
+              src={Technology}
+              alt="Third slide"
+            />
 
-        <p>You home page content!</p>
+            <Carousel.Caption>
+              <h3>Buy Phones and accessories</h3>
+              <p>iPhones, samsung phones, etc. and their accessories</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+        </Carousel>
+        </Container>
       </Container>
     </>
   );
-}
- 
+};
+
 export default Home;
