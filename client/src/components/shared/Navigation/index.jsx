@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../../Authentication/UserProvider';
+import {ReactComponent as CartImage} from './assets/cart.svg';
 
 const NavLink = (props) => {
   // This function allows us to use React Router
@@ -44,7 +45,15 @@ const Navigation = () => {
               <Link to="/login" component={NavLink}>Login</Link>
               <Link to="/register" component={NavLink}>Register</Link>
             </>
-          )}
+          )
+          }
+          </Nav>
+          <Nav className="ml-auto">
+          <React.Fragment>
+            <Link to="/cart" component={NavLink}>
+            <CartImage height="40"></CartImage>
+            </Link>
+          </React.Fragment>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

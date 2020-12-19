@@ -37,10 +37,12 @@ const Products = () => {
             {products && products.length > 0 ? (
               <Table striped bordered hover>
                 <thead>
+                  <tr>
                   <th>Product Name</th>
                   <th>Description</th>
                   <th>Price</th>
                   <th>Options</th>
+                  </tr>
                 </thead>
     
                 <tbody>

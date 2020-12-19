@@ -7,20 +7,13 @@ import LoginForm from './LoginForm';
 const Login = () => {
   return (
     <>
-      <Header title="Your title for the Header component block">
+      <Header title="User Login">
         <p>
-          This paragraph will be the value for <strong>&#123;children&#125;</strong> in the <strong>Header component</strong>.
-        </p>
-        
-        <p>
-          The header is editable under <strong>/src/components/Authentication/Login/index.jsx</strong>
+          Login to access all the features.
         </p>
       </Header>
       
       <Container>
-        <p>
-          The content is editable under <strong>/src/components/Authentication/Login/index.jsx</strong>
-        </p>
         
         <LoginForm/>
       </Container>

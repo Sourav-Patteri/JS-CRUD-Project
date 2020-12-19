@@ -3,6 +3,7 @@ import PageRoutes from '../../Pages/routes';
 import UserRoutes from '../../Users/routes';
 import AuthenticationRoutes from '../../Authentication/routes';
 import ProductRoutes from '../../Products/routes';
+import CartRoutes from '../../Cart/routes';
 
 const Routes = () => {
   return (
@@ -11,6 +12,7 @@ const Routes = () => {
       <UserRoutes/>
       <AuthenticationRoutes/>
       <ProductRoutes/>
+      <CartRoutes/>
     </>
   );
 }

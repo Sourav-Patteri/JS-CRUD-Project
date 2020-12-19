@@ -28,8 +28,8 @@ const Edit = () => {
 
   return (
     <>
-      <Header title="Add a Product">
-          Add a new product listing.
+      <Header title="Edit Product">
+          Update the product listing.
       </Header>
 
       <Container>

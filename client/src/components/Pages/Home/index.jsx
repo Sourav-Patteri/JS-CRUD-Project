@@ -1,50 +1,61 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
+import {Container, Carousel} from 'react-bootstrap';
 import Header from '../../shared/Header';
-
+import Camera from '../../shared/Assets/camera.jpg'
+import Laptop from '../../shared/Assets/laptop.jpg'
+import Technology from '../../shared/Assets/technology.jpg'
 
 const Home = () => {
   return (
     <>
       <Header title="Escia">
-        <p>
-          Make your life better with our products.
-        </p>
+        <p>Make your life better with our products.</p>
       </Header>
 
       <Container>
-        <hr/>
+        <Container>
+        <Carousel>
+          <Carousel.Item>
+            <img
+              
+              className="d-block w-100"
+              src={Camera}
+              alt="First slide"
+            />
+            <Carousel.Caption>
+              <h3>Buy Cameras</h3>
+              <p>DSLR's, Mirorless, etc..</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              className="d-block w-100"
+              src={Laptop}
+              alt="Third slide"
+            />
 
-        <p>
-          The content is editable under <strong>/src/components/Pages/Home/index.jsx</strong>
-        </p>
+            <Carousel.Caption>
+              <h3>Buy Laptops</h3>
+              <p>MacBooks, Dell, HP, etc.</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              className="d-block w-100"
+              src={Technology}
+              alt="Third slide"
+            />
 
-        <p>You home page content!</p>
-        <br/> <br/>
-        <img
-          src={"https://via.placeholder.com/150"}
-          width={200}
-          height={200}
-          className="mr-3"
-          alt="any"
-         /> 
-         <img
-          src={"https://via.placeholder.com/150"}
-          width={200}
-          height={200}
-          className="mr-3"
-          alt="any"
-         /> 
-         <img
-          src={"https://via.placeholder.com/150"}
-          width={200}
-          height={200}
-          className="mr-3"
-          alt="any"
-         /> 
+            <Carousel.Caption>
+              <h3>Buy Phones and accessories</h3>
+              <p>iPhones, samsung phones, etc. and their accessories</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+        </Carousel>
+        </Container>
       </Container>
     </>
   );
-}
- 
+};
+
 export default Home;

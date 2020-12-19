@@ -1,18 +1,28 @@
 import React, { useEffect, useState, useContext } from 'react';
 import Header from '../../shared/Header';
 import { Container, Card, Button } from 'react-bootstrap';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import Axios from 'axios';
 import { GlobalStoreContext } from '../../shared/Globals'
 import { NotificationContext } from '../../shared/Notifications'
-
 
 const Show = () => {
     const { id } = useParams();
     const { globalStore } = useContext(GlobalStoreContext);
     const { setNotification } = useContext(NotificationContext);
     const [products, setProducts] = useState({});
+    const [inputs, setInputs] = useState({});
 
+    const handleSubmit = event => {
+      event.persist();
+      setInputs({
+        productId: products._id,
+        name: products.name,
+        price: products.price,
+        quantity: 1
+      })
+    }
+    
     useEffect(() => {
         Axios.get(`${globalStore.REACT_APP_ENDPOINT}/products/${id}`)
         .then(({ data }) => {
@@ -28,7 +38,7 @@ const Show = () => {
 
  return (
 <>
-<Header title="View product">
+<Header title="Product Info">
 
 </Header>
 <Container>
@@ -38,14 +48,14 @@ const Show = () => {
       <Card.Title> {products.productName} </Card.Title>
       <Card.Text>
         {products.description}
-        <p>
-            
-        </p>
+        <br/>
+        <br/>
         Price - {products.price}
-        <p>
-            
-        </p>
-        <Button variant="success">Add to cart</Button>
+        <br/>
+        <br/>
+        <Link to={`../../cart/new`}>
+        <Button variant="success" onClick={handleSubmit}>Add to cart</Button>
+        </Link>
       </Card.Text>
     </Card.Body>
 
