@@ -11,7 +11,7 @@ const Cart = () => {
     const { globalStore } = useContext(GlobalStoreContext);
 
     const [cartItems, setCartItems] = useState([]);
-    const [products, setProducts] = useState([]);
+    // const [products, setProducts] = useState([]);
 
     useEffect(() => {
         if (!globalStore.REACT_APP_ENDPOINT) return;
@@ -27,7 +27,7 @@ const Cart = () => {
           });
         });
 
-        console.log(cartItems);
+        // console.log(cartItems);
 
        /* Axios.get(`${globalStore.REACT_APP_ENDPOINT}/products/${}`)
         .then(({ data })=>{setProducts(data);}).catch(error => {
@@ -37,7 +37,7 @@ const Cart = () => {
           });
         });*/
 
-      }, [globalStore, setNotification]);
+      }, [globalStore, cartItems, setNotification]);
 
 
     return(

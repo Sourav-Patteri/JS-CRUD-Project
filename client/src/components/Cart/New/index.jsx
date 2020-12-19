@@ -1,6 +1,6 @@
 import Axios from 'axios';
-import React, { useEffect, useContext, useState} from 'react';
-import { Redirect, useParams } from 'react-router-dom';
+import React, { useEffect, useContext} from 'react';
+import { Redirect } from 'react-router-dom';
 import { GlobalStoreContext } from '../../shared/Globals';
 import { NotificationContext } from '../../shared/Notifications';
 
@@ -36,7 +36,7 @@ const New = (inputs) => {
     .catch(error => {
       setNotification(`The item could not be added due to an error: ${error.message}`);
     });
-  }, []);
+  }, [globalStore, inputs, setNotification]);
 
   return <Redirect to="../cart"/>;
 }

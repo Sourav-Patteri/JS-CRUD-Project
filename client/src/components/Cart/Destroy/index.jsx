@@ -20,7 +20,7 @@ const Destroy = () => {
     .catch(error => {
       setNotification(`The item could not be removed due to an error: ${error.message}`);
     });
-  }, []);
+  }, [globalStore, id ,setNotification]);
 
   return <Redirect to="/cart"/>;
 }

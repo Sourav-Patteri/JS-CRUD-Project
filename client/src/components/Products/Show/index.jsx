@@ -11,7 +11,7 @@ const Show = () => {
     const { globalStore } = useContext(GlobalStoreContext);
     const { setNotification } = useContext(NotificationContext);
     const [products, setProducts] = useState({});
-    const [inputs, setInputs] = useState({});
+  /*  const [inputs, setInputs] = useState({});
 
     const handleSubmit = event => {
       event.persist();
@@ -21,7 +21,7 @@ const Show = () => {
         price: products.price,
         quantity: 1
       })
-    }
+    }*/
     
     useEffect(() => {
         Axios.get(`${globalStore.REACT_APP_ENDPOINT}/products/${id}`)
@@ -54,7 +54,7 @@ const Show = () => {
         <br/>
         <br/>
         <Link to={`../../cart/new`}>
-        <Button variant="success" onClick={handleSubmit}>Add to cart</Button>
+        <Button variant="success">Add to cart</Button>
         </Link>
       </Card.Text>
     </Card.Body>

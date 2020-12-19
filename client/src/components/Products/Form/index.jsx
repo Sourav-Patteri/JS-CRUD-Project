@@ -90,7 +90,7 @@ const ProductForm = ({ endpoint, preload }) => {
       </Form.Group>
 
       <Form.Group>
-      <Button type="submit">{endpoint == "products" ? "Add Product": "Update Product"}</Button>
+      <Button type="submit">{endpoint === "products" ? "Add Product": "Update Product"}</Button>
       </Form.Group>
     </Form>
   );

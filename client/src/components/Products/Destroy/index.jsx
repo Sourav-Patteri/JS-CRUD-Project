@@ -20,7 +20,7 @@ const Destroy = () => {
     .catch(error => {
       setNotification(`Couldn't destroy the selected product due to an error: ${error.message}`);
     });
-  }, []);
+  }, [globalStore, id ,setNotification]);
 
   return <Redirect to="/products"/>;
 }

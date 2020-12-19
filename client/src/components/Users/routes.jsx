@@ -6,7 +6,6 @@ import Index from './index';
 import Show from './Show';
 import New from './New';
 import Edit from './Edit';
-import Destroy from '../Products/Destroy';
 
 const Routes = () => {
   const { user } = useContext(UserContext);
